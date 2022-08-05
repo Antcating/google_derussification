@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css"/>
+  </head>
+
+<body>
+  <div class="title">
+    <p style="font-size: 20px">DeRus Internet</p>
+    <input type="checkbox" id="switch" class="StateSwitch" checked><label for="switch">Toggle</label>
+  </div>
+  <details class="ManualURLSpoiler">
+    <summary><b>Manual URL Input</b></summary>
+    <details>
+      <summary>Manual Url Help</summary>
+      <p>
+        If you want to delete URL from your Google Search output: <br>
+        - In the input row type in URL you want to delete from search and
+        press <i>Delete</i>. <br>
+        If you want to see the particular URL again:
+        - In the input row type in URL you want to return to the search and
+        press <i>Return</i>.
+      </p>
+    </details>
+    <div id="manual-url">
+      <div class="input_text">Input URL</div>
+      <textarea id="url_input" name="url_input" class="textPlace" rows="2" cols="34" placeholder="vk.com"></textarea>
+      <button type="submit" id="manualSubmit" class="SubmitBtn">Delete from Google</button>
+      <button type="button" id="manualDelete" class="DeleteBtn">Return to Google</button>
+    </div>
+    <div class="ManualStatus"></div>
+  </details>
+  <hr>
+  <details class="CurrentURLSpoiler">
+    <summary><b>Current URL</b></summary>
+    <details>
+      <summary>Current Url Help</summary>
+      <p>
+        In the text box you can see the URL, that you are visiting now.
+        If you want to delete this URL from your Google Search output: <br>
+        - press <i>Delete</i>. <br>
+        If you deleted this URL and want to see it in Google Search again: <br>
+        - press <i>Return</i>.
+      </p>
+
+    </details>
+
+    <div id="current-url">
+      <div class="current_text">Current URL</div>
+      <textarea rows="2" cols="34" id="CurrentURLText" class="textPlace"></textarea>
+      <button type="submit" id="currentSubmit" class="SubmitBtn">Delete from Google</button>
+      <button type="button" id="currentDelete" class="DeleteBtn">Return to Google</button>
+      <div class="CurrentStatus"></div>
+    </div>
+  </details>
+  <hr>
+  <button type="button" class="ListBtn">List deleted URLs</button> <br>
+
+  <div class="input-success">
+    <p></p>
+  </div>
+
+  <div class="list-urls">
+
+  </div>
+  <script src="main.js" type="module"></script>
+
+
+</body>
+
+</html>
+

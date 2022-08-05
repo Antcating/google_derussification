@@ -1,0 +1,35 @@
+{
+
+  "manifest_version": 3,
+  "name": "Google DeRussification",
+  "version": "1.0",
+
+  "description": "Видалення російських сайтів з видачі Google",
+
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/*",
+      			  "*://*.google.com.ua/*"
+      			  ],
+      "js": ["clean.js"],
+      "run_at":"document_end",
+      "all_frames": false
+    }
+  ],
+  "action": {
+  	"browser_style": true,
+    "default_icon": "icons/icon-48.png",
+    "default_popup": "popup/index.html"
+  },
+
+  "permissions": ["storage",
+                  "tabs"
+                  ]
+
+}
+

@@ -1,0 +1,36 @@
+{
+
+  "manifest_version": 2,
+  "name": "CleanGoogle",
+  "version": "1.1",
+
+  "description": "Delete all russian sites from the Google Search.",
+
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/*",
+      			  "*://*.google.com.ua/*"
+      			  ],
+      "js": ["clean.js"],
+      "run_at":"document_end",
+      "all_frames": false
+    }
+  ],
+  "browser_action": {
+  	"browser_style": true,
+    "default_icon": "icons/icon-48.png",
+    "default_popup": "popup/index.html"
+  },
+  
+  "permissions": ["storage",
+                  "*://*.github.com/*",
+                  "tabs"
+                  ]
+
+}
+
